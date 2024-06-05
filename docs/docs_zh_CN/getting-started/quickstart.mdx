@@ -1,0 +1,79 @@
+import ThemedImage from "@theme/ThemedImage";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import ZoomableImage from "/src/theme/ZoomableImage.js";
+import ReactPlayer from "react-player";
+import Admonition from "@theme/Admonition";
+
+# ⚡️ 快速入门
+
+该指南演示如何构建一个基础的提示工作流，并修改该提示以获得不同的输出结果。
+
+## 前提条件
+
+* [安装并运行 Langflow](./install-langflow.mdx)
+
+* [OpenAI API 密钥](https://platform.openai.com)
+
+<Admonition type="info">
+  Langflow v1.0 alpha 版本也可以在 HuggingFace Spaces 上体验。[使用此链接克隆空间](https://huggingface.co/spaces/Langflow/Langflow-Preview?duplicate=true)，在几分钟内创建您自己的 Langflow 工作空间。
+</Admonition>
+
+## Hello World - 基础提示
+
+让我们从一个提示组件开始，以便 OpenAI 的模型遵循人类的指令执行。
+
+提示作为大型语言模型（LLM）的输入，充当着人类指令和计算任务之间的接口。
+
+通过在提示中提交自然语言请求给 LLM，可以获得答案、生成文本并解决问题。
+
+1. 在 Langflow 仪表板中，点击 **New Project**.
+2. 选择 **Basic Prompting**.
+3. 创建 **Basic Prompting** 工作流.
+
+<ZoomableImage
+  alt="Docusaurus themed image"
+  sources={{
+    light: "img/quickstart.png",
+    dark: "img/quickstart.png",
+  }}
+  style={{ width: "80%", margin: "20px auto" }}
+/>
+
+该工作流允许您通过 **Prompt** 与 **OpenAI** 组件进行对话。检查 **Prompt** 组件，**Template** 字段提示 LLM 扮演海盗角色来回答用户。这应该很有趣...
+
+4. 创建 **OpenAI** 组件的环境变量，可以在 **OpenAI API Key** 字段中，点击 **Globe** 按钮，然后点击 **Add New Variable**。
+    1. 在 **Variable Name** 字段中，输入 `openai_api_key`。
+    2. 在 **Value** 字段中，粘贴你的 OpenAI API Key (`sk-...`)。
+    3. 点击 **Save Variable**。
+
+## 运行基础提示流
+
+1. 点击 **Run** 按钮，打开 **Interaction Panel** 窗口，您可以在这里与机器人聊天。
+2. 输入一条消息并按回车键，然后……Ahoy！🏴‍☠️ 机器人会以海盗的风格来回应您！
+
+## 修改提示以获得不同的结果
+
+1. 要修改提示结果，在 **Prompt** 模板中，点击 **Template** 字段，打开 **Edit Prompt** 窗口。
+2. 将 `Answer the user as if you were a pirate` 改为另一个角色，比如 `Answer the user as if you were Harold Abelson.`。
+3. 再次运行基础提示流。
+得到的响应将会明显不同。
+
+## 下一步
+
+Well done! You've built your first prompt in Langflow. 🎉
+
+By adding Langflow components to your flow, you can create all sorts of interesting behaviors.
+
+Here are a couple of examples:
+
+很棒！您已经在 Langflow 中构建了您的第一个提示工作流。🎉
+
+通过在您的流中添加其它的 Langflow 组件，还可以创建各种有趣的应用。
+
+以下是几个示例：
+
+* [记忆聊天机器人](/starter-projects/memory-chatbot.mdx)
+* [博客写手](/starter-projects/blog-writer.mdx)
+* [文档问答](/starter-projects/document-qa.mdx)
+
+

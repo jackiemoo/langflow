@@ -1,0 +1,86 @@
+import ThemedImage from "@theme/ThemedImage";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import ZoomableImage from "/src/theme/ZoomableImage.js";
+import Admonition from "@theme/Admonition";
+
+# 📦 安装 Langflow
+
+<Admonition type="info">
+  Langflow v1.0 alpha 版本也可以在 HuggingFace Spaces 上体验。 [使用此链接克隆空间](https://huggingface.co/spaces/Langflow/Langflow-Preview?duplicate=true) ，在几分钟内创建您自己的 Langflow 工作空间。
+</Admonition>
+
+前置条件是需要在系统上安装 [Python 3.10](https://www.python.org/downloads/release/python-3100/) 和 [pip](https://pypi.org/project/pip/) 或 [pipx](https://pipx.pypa.io/stable/installation/)。
+
+使用pip安装 Langflow:
+```bash
+python -m pip install langflow -U
+```
+
+使用pipx安装 Langflow:
+```bash
+pipx install langflow --python python3.10 --fetch-missing-python
+```
+Pipx 可以使用 --fetch-missing-python 参数来获取缺失的 Python 版本，当然您也可以手动安装所需的 Python 版本。
+
+
+## 安装 Langflow 预发行版本
+
+使用如下命令安装 Langflow 预发行版本：
+
+pip:
+```bash
+python -m pip install langflow --pre --force-reinstall
+```
+
+pipx:
+```bash
+pipx install langflow --python python3.10 --fetch-missing-python --pip-args="--pre --force-reinstall"
+```
+
+使用 --force-reinstall 参数可以确保您安装上最新版本的 Langflow 及其依赖项。
+
+## 遇到问题了吗？
+
+如果您在安装过程中遇到问题，请参阅 [常见安装问题](/migration/possible-installation-issues)。
+
+也可以在 Langflow CLI 中获取帮助：
+
+```bash
+python -m langflow --help
+```
+
+## ⛓️ 运行 Langflow
+
+1. 运行 Langflow，输入以下命令。
+```bash
+python -m langflow run
+```
+
+2. 通过在基于 Chromium 的浏览器中访问 http://127.0.0.1:7860 来确认本地的 Langflow 实例是否成功启动。
+```bash
+│ Welcome to ⛓ Langflow                             │
+│                                                   │
+│ Access http://127.0.0.1:7860                      │
+│ Collaborate, and contribute at our GitHub Repo 🚀 │
+```
+
+3. 继续阅读 [快速入门](./quickstart.mdx)。
+
+## HuggingFace Spaces
+
+HuggingFace 提供了一个在其 Spaces 环境中运行 Langflow 的绝佳替代方案，这意味着您可以无需进行任何本地安装操作也能运行 Langflow。
+
+使用基于 Chromium 的浏览器，访问 [Langflow Space](https://huggingface.co/spaces/Langflow/Langflow?duplicate=true) 或 [Langflow v1.0 alpha Preview Space](https://huggingface.co/spaces/Langflow/Langflow-Preview?duplicate=true)。
+
+您将看到以下截图信息：
+
+<ZoomableImage
+  alt="Docusaurus themed image"
+  sources={{
+    light: "img/duplicate-space.png",
+    dark: "img/duplicate-space.png",
+  }}
+  style={{ width: "100%", margin: "20px auto" }}
+/>
+
+给您的 Space命名，定义其可见性（公开或私有），然后点击 **Duplicate Space** 开始进行安装过程。安装完成后，您将被重定向到 Space 的主页，然后就可以愉快的使用 Langflow啦！
